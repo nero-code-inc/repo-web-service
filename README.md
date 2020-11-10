@@ -22,7 +22,11 @@ This web service will listen for a webhook from github when a new repository is 
     Content type=application/json<br>
     Secret=Any of your choice<br>
     Which events would you like to trigger this webhook?=repository, also do not forget to save it.</b></li>
-  <li>Provide the neccessary credential in the .env file</li>
+  <li>Provide the neccessary credential in the .env file.<br>
+  <b>Insert the following into .env file:<br>
+    USERNAME=enter_your_username_here
+    USER_PASSWORD=enter_your_password_here </b>
+  </li>
   <li>Setup a connection with ngrok https://dashboard.ngrok.com/get-started/setup to allow internet access to you local environment to enable testing.</li>
 </ul>
 
