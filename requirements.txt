@@ -1,0 +1,7 @@
+
+Flask
+requests
+urllib3
+Werkzeug
+python-dotenv
+python-decouple
