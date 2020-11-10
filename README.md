@@ -9,7 +9,7 @@ This web service will listen for a webhook from github when a new repository is 
 <p>The follow is steps are required: </p>
 <ul>
   <li>Install python3</li>
-  <li>A requirements.txt file is provide containing the neccessary dependencies,run <b>sudo pip3 install -r requirements.txt</b> to install neccessary dependencies.</li>
+  <li>A requirements.txt file is provided containing the neccessary dependencies,run <b>sudo pip3 install -r requirements.txt</b> to install neccessary dependencies.</li>
 </ul>
 
 <h1>Setup</h1>
