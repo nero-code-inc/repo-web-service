@@ -28,7 +28,11 @@ This web service will listen for a webhook from github when a new repository is 
 
 <h1>Deploy</h1>
 <ul>
-  <li>run <b>flask run --host=0.0.0.0 &</b> to start your web service.</li>
+  <li>run <b>flask run --host=0.0.0.0 &</b> to start your web service.<br>
+  Before you run the above command, do the following:<br>
+    export FLASK_APP=webhook.py<br>
+    export FLASK_ENV=development
+  </li>
   <li>run <b>./ngrok http 5000</b> to start your service forwarding.</li>
   <li>Copy the forwarding address given by ngrok to your webhook created earlier to enable to send payload to you service.</li>
   <li>Create a repository under your organization and verify that it is automatically protected and create an issue to notify you of this event.</li>
