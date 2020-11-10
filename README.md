@@ -34,5 +34,5 @@ This web service will listen for a webhook from github when a new repository is 
       export FLASK_ENV=development</b>
   </li>
   <li>run <b>./ngrok http 5000</b> to start your service forwarding.</li>
-  <li>Copy the forwarding address given by ngrok to your webhook created earlier to enable to send payload to you service.</li>
+  <li>Copy the forwarding address given by ngrok to your webhook Payload URL created earlier to enable github to send payload to you service.</li>
   <li>Create a repository under your organization and verify that it is automatically protected and create an issue to notify you of this event.</li>
