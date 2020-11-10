@@ -1,6 +1,6 @@
 <h1>Protect Main Branch Automatically<h1>
   
-This web service will listen for a webhook when a new repository is created, and automatically apply protection to the main branch and sends out a notification to notify user of this event.
+This web service will listen for a webhook from github when a new repository is created, and automatically apply protection to the main branch and sends out a notification to notify user of this event.
 
 <p>Start by cloning the repository containing the web service code.</p>
 <p><b><i>git clone https://github.com/nero-code-inc/repo-web-service.git</i></b></p>
