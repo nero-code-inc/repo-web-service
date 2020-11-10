@@ -1,4 +1,4 @@
-<h1>Protect Main Branch Automatically<h1>
+<h1>PROTECT Main Branch AUTOMATICALLY<h1>
   
 This web service will listen for a webhook from github when a new repository is created, and automatically apply protection to the main branch and sends out a notification to notify user of this event.
 
@@ -30,8 +30,8 @@ This web service will listen for a webhook from github when a new repository is 
 <ul>
   <li>run <b>flask run --host=0.0.0.0 &</b> to start your web service.<br>
   Before you run the above command, do the following:<br>
-    export FLASK_APP=webhook.py<br>
-    export FLASK_ENV=development
+    <b>export FLASK_APP=webhook.py<br>
+      export FLASK_ENV=development</b>
   </li>
   <li>run <b>./ngrok http 5000</b> to start your service forwarding.</li>
   <li>Copy the forwarding address given by ngrok to your webhook created earlier to enable to send payload to you service.</li>
