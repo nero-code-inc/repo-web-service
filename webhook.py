@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-import json  
-import os   
+import json    
 from flask import Flask, request  
 import requests  
 from decouple import config
