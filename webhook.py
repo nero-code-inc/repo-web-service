@@ -34,9 +34,7 @@ def branch_protector():
      # issue creation template   
     issue_data = {
                         "title": "Added Protection to Main Branch",
-                        "body": "@"
-                        + username
-                        + " Main branch is now protected.",
+                        "body": "@" + username + " Main branch is now protected.",
                     }
      
    
