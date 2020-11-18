@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-import json  
-import os   
+import json 
 from flask import Flask, request  
 import requests  
 from decouple import config
@@ -34,9 +33,7 @@ def branch_protector():
      # issue creation template   
     issue_data = {
                         "title": "Added Protection to Main Branch",
-                        "body": "@"
-                        + username
-                        + " Main branch is now protected.",
+                        "body": "@" + username + " Main branch is now protected.",
                     }
      
    
@@ -52,7 +49,7 @@ def branch_protector():
         
         if protect_response.status_code == 200:
             print(
-                "Branch Protection: SUCCESSFUL. Status code: ",
+                "Branch Protection: SUCCESSFUL!!! Status code: ",
                 protect_response.status_code,
             )
             print(payload["repository"]["full_name"], "is now protected!!!")
@@ -68,12 +65,12 @@ def branch_protector():
                 )
                 if issue_response.status_code == 201:
                     print(
-                        "Issue Creation: SUCCESSFUL. Status code: ",
+                        "Issue Creation: SUCCESSFUL!!! Status code: ",
                         issue_response.status_code,
                     )
                 else:
                     print(
-                        "Issue Creation: UNSUCCESSFUL. Status code: ",
+                        "Issue Creation: UNSUCCESSFUL!!! Status code: ",
                         issue_response.status_code,
                     )
             else:
@@ -83,7 +80,7 @@ def branch_protector():
         else:
             print(protect_response.content)
             print(
-                "Branch Protection: UNSUCCESSFUL. Status code: ",
+                "Branch Protection: UNSUCCESSFUL!!! Status code: ",
                 protect_response.status_code,
             )
     

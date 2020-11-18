@@ -1,7 +1,7 @@
 
-Flask
-requests
-urllib3
-Werkzeug
-python-dotenv
-python-decouple
+Flask == 1.1.1
+requests == 2.22.0
+urllib3 == 1.25.8
+Werkzeug ==  1.0.0
+python-dotenv == 0.15.0
+python-decouple == 3.3
