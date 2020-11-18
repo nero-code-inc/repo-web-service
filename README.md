@@ -25,7 +25,7 @@ This web service will listen for a webhook from github when a new repository is 
   <li>Provide the neccessary credential in the .env file.<br>
   <b>Insert the following into .env file:<br>
     USERNAME=enter_your_username_here <br>
-    USER_PASSWORD=enter_your_password_here </b>
+    USER_TOKEN=enter_your_personal_token_here </b>
   </li>
   <li>Setup a connection with ngrok https://dashboard.ngrok.com/get-started/setup to allow internet access to you local environment to enable testing.</li>
 </ul>
