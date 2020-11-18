@@ -5,3 +5,4 @@ urllib3 == 1.25.8
 Werkzeug ==  1.0.0
 python-dotenv == 0.15.0
 python-decouple == 3.3
+colorama == 0.4.3
