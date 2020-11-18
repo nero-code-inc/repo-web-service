@@ -5,6 +5,9 @@ from flask import Flask, request
 import requests  
 from decouple import config
 import time
+from colorama import init
+init()
+from colorama import Fore
 
 '''
 This script automates the protection of the main branch of a new repository created for an organization
@@ -28,12 +31,12 @@ def branch_protector():
             "required_status_checks": {"strict": True, "contexts": ["default"]},
             "enforce_admins": False,
             "required_pull_request_reviews": None,
-            "restrictions": None,
+            "restrictions": None
         }
      # issue creation template   
     issue_data = {
                         "title": "Added Protection to Main Branch",
-                        "body": "@" + username + " Main branch is now protected.",
+                        "body": "@" + username + " Main branch is now protected."
                     }
      
    
@@ -44,13 +47,13 @@ def branch_protector():
         session.auth = (username, user_token)
         protect_response = session.put(
             payload["repository"]["url"] + "/branches/main/protection",
-            json.dumps(protection_data),
+            json.dumps(protection_data)
         )
         
         if protect_response.status_code == 200:
-            print(
+            print( Fore.GREEN +
                 "Branch Protection: SUCCESSFUL!!! Status code: ",
-                protect_response.status_code,
+                protect_response.status_code
             )
             print(payload["repository"]["full_name"], "is now protected!!!")
 
@@ -64,24 +67,24 @@ def branch_protector():
                     payload["repository"]["url"] + "/issues", json.dumps(issue_data)
                 )
                 if issue_response.status_code == 201:
-                    print(
+                    print( Fore.GREEN +
                         "Issue Creation: SUCCESSFUL!!! Status code: ",
-                        issue_response.status_code,
+                        issue_response.status_code
                     )
                 else:
-                    print(
+                    print( Fore.RED +
                         "Issue Creation: UNSUCCESSFUL!!! Status code: ",
-                        issue_response.status_code,
+                        issue_response.status_code
                     )
             else:
-                print(
+                print( Fore.RED +
                     "No Issue Available at this time!!!"
                 )
         else:
             print(protect_response.content)
-            print(
+            print( Fore.RED +
                 "Branch Protection: UNSUCCESSFUL!!! Status code: ",
-                protect_response.status_code,
+                protect_response.status_code
             )
     
 
