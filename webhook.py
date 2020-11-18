@@ -17,7 +17,7 @@ application = Flask(__name__)
 
 # supply credential fron .env config file
 username = config('USERNAME')
-password = config('USER_PASSWORD')
+user_token = config('USER_TOKEN')
 
 @application.route("/", methods=["POST"])
 def branch_protector():
@@ -41,7 +41,7 @@ def branch_protector():
         time.sleep(2)
         # apply protection to newly created repository.
         session = requests.session()
-        session.auth = (username, password)
+        session.auth = (username, user_token)
         protect_response = session.put(
             payload["repository"]["url"] + "/branches/main/protection",
             json.dumps(protection_data),
@@ -59,7 +59,7 @@ def branch_protector():
             if payload["repository"]["has_issues"]:
                 
                 session = requests.session()
-                session.auth = (username, password)
+                session.auth = (username, user_token)
                 issue_response = session.post(
                     payload["repository"]["url"] + "/issues", json.dumps(issue_data)
                 )
